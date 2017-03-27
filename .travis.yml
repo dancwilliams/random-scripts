@@ -18,4 +18,4 @@ install:
 
 script:
   - pwd
-  - cd subnet_cruncher && make test
+  - make test
