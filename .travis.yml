@@ -12,5 +12,8 @@ python:
 env:
   - TEST_DIR=subnet_cruncher
 
+install:
+  - cd $TEST_DIR && pip install -r dev-requirements.txt
+
 script:
-  - cd $TEST_DIR && pip install -r dev-requirements.txt && "PYTHONPATH=. py.test --cov=subnet_cruncher tests"
+  - cd $TEST_DIR && make test
