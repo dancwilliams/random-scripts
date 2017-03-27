@@ -1,0 +1,19 @@
+language: python
+sudo: false
+os:
+  - linux
+
+python:
+  - "2.7"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+
+env:
+  - TEST_DIR=subnet_cruncher
+
+install:
+  - cd $TEST_DIR pip install -r dev-requirements.txt
+
+script:
+  - "PYTHONPATH=. py.test --cov=subnet_crunch tests"
