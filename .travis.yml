@@ -13,7 +13,8 @@ env:
   - TEST_DIR=subnet_cruncher
 
 install:
-  - cd $TEST_DIR && pip install -r dev-requirements.txt
+  - pip install -r dev-requirements.txt
 
 script:
-  - cd $TEST_DIR && make test
+  - pwd
+  - cd subnet_cruncher && make test
